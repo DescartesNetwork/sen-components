@@ -4,6 +4,7 @@
   "scripts": {
     "prestart": "npm run build && lerna bootstrap",
     "start": "lerna run --scope render --stream start",
+    "prebuild": "lerna bootstrap --no-private",
     "build": "lerna run build --no-private"
   },
   "devDependencies": {
