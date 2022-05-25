@@ -1,0 +1,12 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "prestart": "npm run build && lerna bootstrap",
+    "start": "lerna run --scope render --stream start",
+    "build": "lerna run build --no-private"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
