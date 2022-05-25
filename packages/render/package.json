@@ -1,6 +1,6 @@
 {
   "name": "render",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@sentre/antd-iconsax": "^1.0.1",
