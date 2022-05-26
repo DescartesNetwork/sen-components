@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@sentre/antd-iconsax": "^1.0.1",
-    "@sentre/antd-ionicon": "^1.0.1",
+    "@sentre/antd-iconsax": "^1.0.0",
+    "@sentre/antd-ionicon": "^1.0.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",

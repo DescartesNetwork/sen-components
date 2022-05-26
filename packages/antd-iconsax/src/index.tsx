@@ -4,7 +4,7 @@
  */
 
 import { forwardRef } from 'react'
-import './index.less'
+import './index.css'
 
 export type IconsaxVariant =
   | 'Linear'

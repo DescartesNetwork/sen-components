@@ -1,0 +1,12 @@
+.sax-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.sax-icon > path[stroke] {
+  stroke: currentcolor;
+}
+
+.sax-icon > path[fill] {
+  fill: currentcolor;
+}

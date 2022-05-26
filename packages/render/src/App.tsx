@@ -4,8 +4,8 @@ import IonIcon from '@sentre/antd-ionicon'
 const App = () => {
   return (
     <div>
-      <IonIcon name="aperture-outline" />
-      <IconSax name="Activity" color="#FF8A65" />
+      <IonIcon name="flask-outline" />
+      <IconSax name="Activity" variant="Bulk" style={{ color: '#FF8A65' }} />
     </div>
   )
 }
