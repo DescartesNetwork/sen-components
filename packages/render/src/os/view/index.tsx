@@ -1,7 +1,7 @@
 import IconSax from '@sentre/antd-iconsax'
 import IonIcon from '@sentre/antd-ionicon'
 
-const App = () => {
+const View = () => {
   return (
     <div>
       <IonIcon name="flask-outline" />
@@ -10,4 +10,4 @@ const App = () => {
   )
 }
 
-export default App
+export default View

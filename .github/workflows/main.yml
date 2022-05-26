@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Welcome
-        run: echo Start deploying Sen Component
+        run: echo Start deploying Sen Components
       - name: Publish npm package
         uses: actions/setup-node@v2
         with:
