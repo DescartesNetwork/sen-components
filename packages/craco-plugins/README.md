@@ -1,4 +1,4 @@
-# Antd Iconsax
+# CRACO Pluigns
 
 This package offers several fancy craco plugins that work/patch Webpack 5.
 
