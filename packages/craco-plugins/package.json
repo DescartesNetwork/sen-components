@@ -46,7 +46,7 @@
     "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
     "postcss": "^8.4.14",
-    "postcss-prefixwrap": "^1.29.1",
+    "postcss-prefix-selector": "^1.15.0",
     "process": "^0.11.10",
     "react-scripts": "^5.0.1",
     "stream-browserify": "^3.0.0",
