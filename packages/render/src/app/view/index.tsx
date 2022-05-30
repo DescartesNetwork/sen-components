@@ -1,5 +1,7 @@
 import { Col, Divider, Row, Typography } from 'antd'
 
+import './index.less'
+
 const View = () => {
   return (
     <Row gutter={[24, 24]}>
@@ -8,6 +10,11 @@ const View = () => {
       </Col>
       <Col span={24}>
         <Typography.Text>Appx</Typography.Text>
+      </Col>
+      <Col span={24}>
+        <Typography.Text className="app-isolated-text">
+          App: Test Style Module
+        </Typography.Text>
       </Col>
     </Row>
   )

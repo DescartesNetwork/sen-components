@@ -14,9 +14,9 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
   const uniqueSelector = '#' + uniqueName
   const themeSelectors = theme.map((e) => '#' + e.trim())
   const prefixed = themeSelectors.map((e) => new RegExp(`^${e} `, 'i'))
-  const styleExt = '.(c|(le)|(sa)|(sc))ss'
+  const styleExt = '.(css|less|sass|scss)$'
   const osExt = '.os'
-  const end = '$'
+  const nodeModules = 'node_modules'
 
   const { hasFoundAny, matches } = getLoaders(
     webpackConfig,
@@ -27,26 +27,31 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
     prefixer({
       prefix: `#${selector}`,
       exclude: ['html', 'body', ...prefixed],
-      includeFiles: [new RegExp(selector + osExt + styleExt + end, 'i')],
+      includeFiles: [new RegExp(selector + osExt + styleExt, 'i')],
     }),
   )
   const appThemePrefixer = theme.map((selector) =>
     prefixer({
       prefix: `#${selector}`,
       exclude: ['html', 'body', ...prefixed],
-      includeFiles: [new RegExp(selector + styleExt + end, 'i')],
+      includeFiles: [new RegExp(selector + styleExt, 'i')],
     }),
   )
   const appIdPrefixer = prefixer({
     prefix: uniqueSelector,
     exclude: ['html', 'body'],
-    includeFiles: [new RegExp(styleExt + end, 'i')],
-    ignoreFiles: [new RegExp(osExt + styleExt + end, 'i')],
+    includeFiles: [new RegExp(styleExt, 'i')],
+    ignoreFiles: [
+      new RegExp(osExt + styleExt, 'i'),
+      new RegExp(nodeModules, 'i'),
+    ],
     transform: (prefix, selector, prefixedSelector) => {
       prefixedSelector = selector
       themeSelectors.forEach((e) => {
         prefixedSelector = prefixedSelector.replace(e, `${e} ${uniqueSelector}`)
       })
+      if (!prefixedSelector.includes(uniqueSelector))
+        prefixedSelector = `${uniqueSelector} ${prefixedSelector}`
       return prefixedSelector
     },
   })
