@@ -1,3 +1,3 @@
-# components
+# Sen Components
 
-🍱 React components for Ant Design on Sentre Hub
+🍱 React components for CRACO & Ant Design on Sentre Hub
