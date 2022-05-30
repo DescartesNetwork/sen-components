@@ -7,7 +7,11 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
   webpackConfig.plugins.push(
-    new BundleAnalyzerPlugin({ analyzerMode: 'static', openAnalyzer: false }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+      logLevel: 'silent',
+    }),
   )
   return webpackConfig
 }
