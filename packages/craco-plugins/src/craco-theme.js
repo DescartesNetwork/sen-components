@@ -28,8 +28,9 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
       prefix: `#${mode}`,
       exclude: ['html', ...prefixed],
       includeFiles: [new RegExp(mode + osExt + styleExt, 'i')],
-      transform: (prefix, selector) => {
+      transform: (prefix, selector, prefixedSelector) => {
         if (selector === 'body') return selector + prefix
+        else return prefixedSelector
       },
     }),
   )
@@ -38,8 +39,9 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
       prefix: `#${mode}`,
       exclude: ['html', ...prefixed],
       includeFiles: [new RegExp(mode + styleExt, 'i')],
-      transform: (prefix, selector) => {
+      transform: (prefix, selector, prefixedSelector) => {
         if (selector === 'body') return selector + prefix
+        else return prefixedSelector
       },
     }),
   )
