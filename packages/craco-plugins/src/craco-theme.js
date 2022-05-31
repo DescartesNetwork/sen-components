@@ -11,7 +11,7 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
   // Cannot use prebuilt options in craco, so we have to add it manually
   // https://stackoverflow.com/questions/68738215/craco-plugin-not-loading
   const { theme, uniqueName } = pluginOptions
-  const uniqueSelector = '#' + uniqueName
+  const uniqueSelector = uniqueName ? '#' + uniqueName : ''
   const themeSelectors = theme.map((e) => '#' + e.trim())
   const prefixed = themeSelectors.map((e) => new RegExp(`^${e} `, 'i'))
   const styleExt = '.(css|less|sass|scss)$'
