@@ -14,6 +14,8 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
   )
   // Add polyfill libraries
   webpackConfig.resolve.fallback = {
+    // For Basics
+    buffer: require.resolve('buffer/'),
     // For IPFS
     util: require.resolve('util/'),
     // For WASM

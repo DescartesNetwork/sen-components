@@ -4,7 +4,7 @@ import './index.less'
 
 const View = () => {
   return (
-    <Row gutter={[24, 24]}>
+    <Row gutter={[24, 24]} id="senhub">
       <Col span={24}>
         <Divider style={{ margin: 0, width: '100%' }} />
       </Col>
