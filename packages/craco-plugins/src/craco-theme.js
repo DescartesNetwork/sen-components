@@ -23,18 +23,24 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
     loaderByName('postcss-loader'),
   )
   if (!hasFoundAny) return webpackConfig
-  const osThemePrefixer = theme.map((selector) =>
+  const osThemePrefixer = theme.map((mode) =>
     prefixer({
-      prefix: `#${selector}`,
-      exclude: ['html', 'body', ...prefixed],
-      includeFiles: [new RegExp(selector + osExt + styleExt, 'i')],
+      prefix: `#${mode}`,
+      exclude: ['html', ...prefixed],
+      includeFiles: [new RegExp(mode + osExt + styleExt, 'i')],
+      transform: (prefix, selector) => {
+        if (selector === 'body') return selector + prefix
+      },
     }),
   )
-  const appThemePrefixer = theme.map((selector) =>
+  const appThemePrefixer = theme.map((mode) =>
     prefixer({
-      prefix: `#${selector}`,
-      exclude: ['html', 'body', ...prefixed],
-      includeFiles: [new RegExp(selector + styleExt, 'i')],
+      prefix: `#${mode}`,
+      exclude: ['html', ...prefixed],
+      includeFiles: [new RegExp(mode + styleExt, 'i')],
+      transform: (prefix, selector) => {
+        if (selector === 'body') return selector + prefix
+      },
     }),
   )
   const appIdPrefixer = prefixer({
