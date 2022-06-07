@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { RemoteComponent } from 'react-dynamic-remote-component'
+import { RemoteComponent } from '@sentre/react-dynamic-remote-component'
 
 import { Button, Col, Layout, Row, Space, Typography } from 'antd'
 import IconSax from '@sentre/antd-iconsax'
@@ -9,6 +9,7 @@ import ThemeSwitch from 'os/components/themeSwitch'
 import 'os/static/styles/dark.os.less'
 import 'os/static/styles/light.os.less'
 import './index.os.less'
+import RemoteLogo from 'os/components/remoteLogo'
 
 const View = () => {
   return (
@@ -38,6 +39,9 @@ const View = () => {
               module="./bootstrap"
             />
           </Suspense>
+        </Col>
+        <Col span={24}>
+          <RemoteLogo />
         </Col>
         <Col span={24}>
           <Typography.Text className="isolated-text">

@@ -5,6 +5,7 @@ const CracoCompatibility = require('./craco-compatibility')
 const CracoWasm = require('./craco-wasm')
 const CracoSilence = require('./craco-silence')
 const CracoAnalyzer = require('./craco-analyzer')
+const CracoAssetSenhub = require('./craco-asset-senhub')
 
 module.exports = {
   CracoAppLessPlugin,
@@ -15,4 +16,5 @@ module.exports = {
   CracoWasm,
   CracoSilence,
   CracoAnalyzer,
+  CracoAssetSenhub,
 }
