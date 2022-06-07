@@ -21,10 +21,10 @@ function test(declared, original, transformed) {
 }
 
 class FileListPlugin {
-  static defaultOutputFile = 'asset-senhub.json'
+  static defaultOutputFile = 'asset-senhub'
 
   constructor(outputFile = FileListPlugin.defaultOutputFile) {
-    this.outputFile = outputFile
+    this.output = outputFile + '.json'
   }
 
   apply(compiler) {
@@ -54,7 +54,7 @@ class FileListPlugin {
           })
         })
         compilation.emitAsset(
-          this.outputFile,
+          this.output,
           new RawSource(JSON.stringify(assets)),
         )
       })
