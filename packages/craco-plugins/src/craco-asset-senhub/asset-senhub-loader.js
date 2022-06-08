@@ -2,7 +2,7 @@ const Module = require('module')
 const nodeEval = require('node-eval')
 
 const defaultOptions = {
-  extensions: ['.png', '.jpeg', '.jpg', '.gif', '.md'],
+  extensions: ['.png', '.jpeg', '.jpg', '.gif', '.md', '.svg'],
   exports: ['logo', 'panels', 'readme'],
 }
 

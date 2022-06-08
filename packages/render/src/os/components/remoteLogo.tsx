@@ -16,7 +16,7 @@ const RemoteLogo = () => {
   useEffect(() => {
     ;(async () => {
       const { logo } = await fetchAsset()
-      return setSrc(logo)
+      return setSrc(window.location.origin + '/' + logo)
     })()
   }, [])
 
