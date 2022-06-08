@@ -11,6 +11,7 @@ module.exports = function (content) {
     ...defaultOptions,
     ...(this.getOptions() || {}),
   }
+
   // Convert image to path in the 'require' statement
   extensions.forEach(function (ext) {
     Module._extensions[ext] = function (module, filename) {
