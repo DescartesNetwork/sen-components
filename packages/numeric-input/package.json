@@ -26,10 +26,10 @@
   },
   "homepage": "https://github.com/DescartesNetwork/sen-components#readme",
   "dependencies": {
-    "@sentre/antd-ionicon": "^1.0.23"
+    "@sentre/antd-ionicon": "^1.0.23",
+    "antd": "^4.20.2"
   },
   "peerDependencies": {
-    "antd": "^4.20.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
