@@ -5,7 +5,7 @@ This package wraps [InputNumber](https://ant.design/components/input-number/) in
 ## Installation
 
 ```bash
-npm i @sentre/antd-numeric-input
+npm i antd @sentre/antd-numeric-input
 ```
 
 ## Usage
