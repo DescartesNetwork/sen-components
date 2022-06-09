@@ -9,7 +9,7 @@ const View = () => {
         <Divider style={{ margin: 0, width: '100%' }} />
       </Col>
       <Col span={24}>
-        <Typography.Text>Appx</Typography.Text>
+        <Typography.Text>App</Typography.Text>
       </Col>
       <Col span={24}>
         <Typography.Text className="app-isolated-text">
