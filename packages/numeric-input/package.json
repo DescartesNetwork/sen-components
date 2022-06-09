@@ -1,6 +1,6 @@
 {
   "name": "@sentre/antd-numeric-input",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "Numeric Input for Ant Design",
   "main": "dist/index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/DescartesNetwork/sen-components#readme",
   "dependencies": {
-    "@sentre/antd-ionicon": "^1.0.23",
+    "@sentre/antd-ionicon": "^1.0.24",
     "antd": "^4.20.2"
   },
   "peerDependencies": {
