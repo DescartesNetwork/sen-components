@@ -1,12 +1,24 @@
 const path = require('path')
 
-const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
+const defaultOptions = {
+  outputFile: 'asset-senhub',
+  extensions: ['.png', '.jpeg', '.jpg', '.gif', '.md', '.svg'],
+  exports: ['logo', 'panels', 'readme'],
+}
+
+// const tests = new RegExp()
+
+const overrideWebpackConfig = ({
+  context,
+  webpackConfig,
+  pluginOptions = {},
+}) => {
   webpackConfig.module.rules.push({
-    test: /static.app.(js|mjs|jsx|ts|tsx)$/,
+    test: /static\.app\.(js|mjs|jsx|ts|tsx)$/,
     use: [
       {
         loader: path.resolve(__dirname, './asset-senhub-loader.js'),
-        options: pluginOptions || {},
+        options: { ...pluginOptions, ...defaultOptions },
       },
       {
         loader: 'babel-loader',

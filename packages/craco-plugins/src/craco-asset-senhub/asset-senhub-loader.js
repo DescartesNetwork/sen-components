@@ -5,11 +5,6 @@ const nodeEval = require('node-eval')
 const { hash } = require('./utils')
 
 const pathSep = path.sep
-const defaultOptions = {
-  outputFile: 'asset-senhub',
-  extensions: ['.png', '.jpeg', '.jpg', '.gif', '.md', '.svg'],
-  exports: ['logo', 'panels', 'readme'],
-}
 
 const buildManifest = (exports, values) => {
   const assets = {}
@@ -18,7 +13,6 @@ const buildManifest = (exports, values) => {
     if (typeof value === 'string') return buildName(value)
     if (Array.isArray(value))
       return value.map((filename) => transform(filename))
-    console.log(value)
     throw new Error(`The assets with type of ${typeof value} is not supported!`)
   }
   exports.forEach((key) => {
@@ -39,10 +33,7 @@ const buildName = (filepath) => {
 }
 
 module.exports = function (content) {
-  const { outputFile, extensions, exports } = {
-    ...defaultOptions,
-    ...(this.getOptions() || {}),
-  }
+  const { outputFile, extensions, exports } = this.getOptions()
 
   // Convert image to path in the 'require' statement
   extensions.forEach((ext) => {
@@ -56,6 +47,7 @@ module.exports = function (content) {
   Object.values(assets)
     .flat()
     .forEach((filepath) => {
+      this.addDependency(filepath)
       const buf = fs.readFileSync(filepath)
       let filename = buildName(filepath)
       this.emitFile(filename, buf)
