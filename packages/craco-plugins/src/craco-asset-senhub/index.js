@@ -18,7 +18,7 @@ const overrideWebpackConfig = ({
     use: [
       {
         loader: path.resolve(__dirname, './asset-senhub-loader.js'),
-        options: { ...pluginOptions, ...defaultOptions },
+        options: { ...defaultOptions, ...pluginOptions },
       },
       {
         loader: 'babel-loader',
