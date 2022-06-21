@@ -3,8 +3,12 @@
   "version": "1.0.27",
   "description": "Craco plugins for CRA",
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "yarn clean",
     "build": "babel src -d dist",
     "clean": "rm -rf ./dist"
   },
@@ -24,6 +28,13 @@
     "url": "https://github.com/DescartesNetwork/sen-components/issues"
   },
   "homepage": "https://github.com/DescartesNetwork/sen-components#readme",
+  "engines": {
+    "node": ">=16 <=18"
+  },
+  "resolutions": {
+    "@types/react": "17.0.39",
+    "@types/react-dom": "17.0.11"
+  },
   "peerDependencies": {
     "@craco/craco": "^6.4.3",
     "react-scripts": "^5.0.1",

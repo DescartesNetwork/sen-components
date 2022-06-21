@@ -3,8 +3,12 @@
   "version": "1.0.27",
   "description": "Iconsax for Ant Design",
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "yarn clean",
     "build": "tsc",
     "postbuild": "copyfiles -u 1 src/**/*.css dist/",
     "clean": "rm -rf ./dist"
@@ -26,6 +30,13 @@
     "url": "https://github.com/DescartesNetwork/sen-components/issues"
   },
   "homepage": "https://github.com/DescartesNetwork/sen-components#readme",
+  "engines": {
+    "node": ">=16 <=18"
+  },
+  "resolutions": {
+    "@types/react": "17.0.39",
+    "@types/react-dom": "17.0.11"
+  },
   "dependencies": {
     "iconsax-react": "^0.0.8"
   },
