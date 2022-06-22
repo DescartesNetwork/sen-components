@@ -1,6 +1,14 @@
+import EmbededView from '@sentre/embeded-view'
 import { Col, Divider, Row, Typography } from 'antd'
 
 import './index.less'
+
+const wallet: any = {
+  getAddress: async () => '8W6QginLcAydYyMYjxuyKQN56NzeakDE3aRFrAmocS6D',
+  signTransaction: async () => {},
+  signAllTransactions: async () => {},
+  signMessage: async () => {},
+}
 
 const View = () => {
   return (
@@ -15,6 +23,15 @@ const View = () => {
         <Typography.Text className="app-isolated-text">
           App: Test Style Module
         </Typography.Text>
+      </Col>
+      <Col span={24}>
+        <EmbededView
+          appId="sypool"
+          title="Sypool Embeded View"
+          wallet={wallet}
+          src="https://app.sypool.io/"
+          verbose
+        />
       </Col>
     </Row>
   )

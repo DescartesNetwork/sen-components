@@ -24,4 +24,6 @@ You can find details for props in [https://ionic.io/ionicons/usage](https://ioni
 
 ```
 logo-telegram
+logo-sentre
+logo-solana
 ```

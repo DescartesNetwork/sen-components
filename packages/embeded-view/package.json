@@ -1,0 +1,51 @@
+{
+  "name": "@sentre/embeded-view",
+  "version": "1.0.28",
+  "description": "Embeded View for Sentre Hub",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn clean",
+    "build": "tsc",
+    "clean": "rm -rf ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DescartesNetwork/sen-components.git"
+  },
+  "keywords": [
+    "react",
+    "embeded",
+    "sentre",
+    "senhub"
+  ],
+  "author": "Tu Phan <tuphan@descartes.network>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DescartesNetwork/sen-components/issues"
+  },
+  "homepage": "https://github.com/DescartesNetwork/sen-components#readme",
+  "engines": {
+    "node": ">=16 <=18"
+  },
+  "resolutions": {
+    "@types/react": "17.0.39",
+    "@types/react-dom": "17.0.11"
+  },
+  "dependencies": {
+    "@sentre/connector": "^0.0.30"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.45",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-helmet": "^6.1.5",
+    "typescript": "^4.7.2"
+  }
+}

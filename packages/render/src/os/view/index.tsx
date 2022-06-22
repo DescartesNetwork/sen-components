@@ -18,6 +18,9 @@ const View = () => {
         <Col span={24}>
           <Space>
             <Button type="text" icon={<IonIcon name="flask-outline" />} />
+            <Button type="text" icon={<IonIcon name="logo-telegram" />} />
+            <Button type="text" icon={<IonIcon name="logo-sentre" />} />
+            <Button type="text" icon={<IonIcon name="logo-solana" />} />
             <Button
               type="text"
               icon={
@@ -32,6 +35,14 @@ const View = () => {
           </Space>
         </Col>
         <Col span={24}>
+          <Space>
+            <RemoteLogo />
+            <Typography.Text className="isolated-text">
+              Test Style Module
+            </Typography.Text>
+          </Space>
+        </Col>
+        <Col span={24}>
           <Suspense fallback="Loading...">
             <RemoteComponent
               url="http://localhost:3000/index.js"
@@ -39,14 +50,6 @@ const View = () => {
               module="./bootstrap"
             />
           </Suspense>
-        </Col>
-        <Col span={24}>
-          <RemoteLogo />
-        </Col>
-        <Col span={24}>
-          <Typography.Text className="isolated-text">
-            Test Style Module
-          </Typography.Text>
         </Col>
       </Row>
     </Layout>
