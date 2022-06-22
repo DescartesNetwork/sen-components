@@ -1,11 +1,11 @@
 {
   "name": "render",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "private": true,
   "dependencies": {
-    "@sentre/antd-iconsax": "^1.0.28",
-    "@sentre/antd-ionicon": "^1.0.28",
-    "@sentre/embeded-view": "^1.0.28",
+    "@sentre/antd-iconsax": "^1.0.29",
+    "@sentre/antd-ionicon": "^1.0.29",
+    "@sentre/embeded-view": "^1.0.29",
     "@sentre/react-dynamic-remote-component": "^0.0.6",
     "antd": "^4.20.6",
     "react": "^17.0.2",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@craco/craco": "^6.4.3",
-    "@sentre/craco-plugins": "^1.0.28",
+    "@sentre/craco-plugins": "^1.0.29",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^14.2.0",
