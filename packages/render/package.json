@@ -37,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^6.4.3",
+    "@craco/craco": "^7.0.0-alpha.5",
     "@sentre/craco-plugins": "^1.0.29",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
