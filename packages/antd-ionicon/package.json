@@ -1,6 +1,6 @@
 {
   "name": "@sentre/antd-ionicon",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "description": "IonIcon for Ant Design",
   "main": "dist/index.js",
   "publishConfig": {
