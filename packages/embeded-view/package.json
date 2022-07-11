@@ -36,7 +36,7 @@
     "@types/react-dom": "17.0.11"
   },
   "dependencies": {
-    "@sentre/connector": "^0.0.30"
+    "@sentre/connector": "^0.0.33"
   },
   "peerDependencies": {
     "react": "^17.0.2",
