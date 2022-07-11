@@ -30,10 +30,10 @@
     "@ethersproject/logger" "^5.6.0"
     hash.js "1.1.7"
 
-"@sentre/connector@^0.0.34":
-  version "0.0.34"
-  resolved "https://registry.yarnpkg.com/@sentre/connector/-/connector-0.0.34.tgz#bc5f9505a53a9491d56a0a3c4e8ae1d780487c84"
-  integrity sha512-HmZrawL9DZszQxnC9lINRhUewX02H1z4UDyJRCi6rzdSgx1LAKFJvNBoMSo+dWZCOXPJqCpU1J3YeMoUcNDDxg==
+"@sentre/connector@^0.0.35":
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/@sentre/connector/-/connector-0.0.35.tgz#e21bb98e35c4b4029c94708f8a16d336e31e98de"
+  integrity sha512-aUh9dB1RVkc8iUNdau5/DAQNG7p/f/3gccNxl5ZMNjZSFgdFjCG0DS+OXm2LJX3nB2uICefEwiO5pLxI/qKm9w==
   dependencies:
     "@solana/wallet-adapter-base" "^0.9.7"
     "@solana/web3.js" "^1.44.3"
