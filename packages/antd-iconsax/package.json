@@ -1,6 +1,6 @@
 {
   "name": "@sentre/antd-iconsax",
-  "version": "1.0.35",
+  "version": "1.0.36",
   "description": "Iconsax for Ant Design",
   "main": "dist/index.js",
   "publishConfig": {
