@@ -36,6 +36,9 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
   webpackConfig.cache.buildDependencies.config.push(
     path.join(context.paths.appPath, './craco.config.js'),
   )
+  // Allow expression dependencies
+  // Critical dependency: the request of a dependency is an expression
+  webpackConfig.module.exprContextCritical = false
   return webpackConfig
 }
 
