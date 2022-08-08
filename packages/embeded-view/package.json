@@ -1,6 +1,6 @@
 {
   "name": "@sentre/embeded-view",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "description": "Embeded View for Sentre Hub",
   "main": "dist/index.js",
   "publishConfig": {
