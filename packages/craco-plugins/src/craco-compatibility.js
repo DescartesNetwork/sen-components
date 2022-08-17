@@ -31,6 +31,8 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
     fs: false,
     // For Jupiter Aggregator
     process: require.resolve('process/browser'),
+    // For Metaplex
+    zlib: require.resolve('browserify-zlib'),
   }
   // Fix unrecognized change / caching problem
   webpackConfig.cache.buildDependencies.config.push(
