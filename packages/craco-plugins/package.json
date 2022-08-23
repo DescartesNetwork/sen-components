@@ -1,6 +1,6 @@
 {
   "name": "@sentre/craco-plugins",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "description": "Craco plugins for CRA",
   "main": "dist/index.js",
   "publishConfig": {
