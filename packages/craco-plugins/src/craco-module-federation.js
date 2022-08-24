@@ -31,17 +31,21 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
 module.exports = {
   overrideWebpackConfig,
   overrideDevServerConfig,
-  enableHMR: (bootstrapAppPath = '') => {
+  enableHMR: (opts = {}) => {
     const pathSep = path.sep
     const rootDir = process.env.PWD
-    expand({
-      parsed: {
-        REACT_APP_HMR: path.join(
-          rootDir,
-          bootstrapAppPath || `${pathSep}src${pathSep}bootstrap.app.tsx`,
-        ),
-      },
-    })
+    const env = process.env.NODE_ENV
+    const { bootstrapAppPath, enabledEnvs } = {
+      ...opts,
+      bootstrapAppPath: `${pathSep}src${pathSep}bootstrap.app.tsx`,
+      enabledEnvs: ['development'],
+    }
+    if (enabledEnvs.includes(env))
+      expand({
+        parsed: {
+          REACT_APP_HMR: path.join(rootDir, bootstrapAppPath),
+        },
+      })
     return {
       overrideWebpackConfig,
       overrideDevServerConfig,
