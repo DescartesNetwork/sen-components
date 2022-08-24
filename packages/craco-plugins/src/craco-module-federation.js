@@ -36,9 +36,9 @@ module.exports = {
     const rootDir = process.env.PWD
     const env = process.env.NODE_ENV
     const { bootstrapAppPath, enabledEnvs } = {
-      ...opts,
       bootstrapAppPath: `${pathSep}src${pathSep}bootstrap.app.tsx`,
       enabledEnvs: ['development'],
+      ...opts,
     }
     if (enabledEnvs.includes(env))
       expand({
