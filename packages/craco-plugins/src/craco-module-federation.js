@@ -31,12 +31,12 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
 module.exports = {
   overrideWebpackConfig,
   overrideDevServerConfig,
-  enableHRM: (bootstrapAppPath = '') => {
+  enableHMR: (bootstrapAppPath = '') => {
     const pathSep = path.sep
     const rootDir = process.env.PWD
     expand({
       parsed: {
-        REACT_APP_HRM: path.join(
+        REACT_APP_HMR: path.join(
           rootDir,
           bootstrapAppPath || `${pathSep}src${pathSep}bootstrap.app.tsx`,
         ),
