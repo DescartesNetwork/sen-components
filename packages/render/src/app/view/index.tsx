@@ -26,10 +26,10 @@ const View = () => {
       </Col>
       <Col span={24}>
         <EmbededView
-          appId="sypool"
-          title="Sypool Embeded View"
+          appId="otter_cash"
+          title="Otter Cash"
           wallet={wallet}
-          src="https://app.sypool.io/"
+          src="https://otter.cash/deposit"
           verbose
         />
       </Col>

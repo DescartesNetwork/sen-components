@@ -1,7 +1,8 @@
 /**
  * Credit https://github.com/hasanayan/craco-module-federation
  */
-
+const path = require('path')
+const { expand } = require('dotenv-expand')
 const {
   overrideWebpackConfig: originOverrideWebpackConfig,
   overrideDevServerConfig,
@@ -27,4 +28,23 @@ const overrideWebpackConfig = ({ context, webpackConfig, pluginOptions }) => {
   return webpackConfig
 }
 
-module.exports = { overrideWebpackConfig, overrideDevServerConfig }
+module.exports = {
+  overrideWebpackConfig,
+  overrideDevServerConfig,
+  enableHRM: (bootstrapAppPath = '') => {
+    const pathSep = path.sep
+    const rootDir = process.env.PWD
+    expand({
+      parsed: {
+        REACT_APP_HRM: path.join(
+          rootDir,
+          bootstrapAppPath || `${pathSep}src${pathSep}bootstrap.app.tsx`,
+        ),
+      },
+    })
+    return {
+      overrideWebpackConfig,
+      overrideDevServerConfig,
+    }
+  },
+}
