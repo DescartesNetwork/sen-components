@@ -4,7 +4,7 @@ import { Gateway, Wallet } from '@sentre/connector'
 export type EmbededViewProps = {
   appId: string
   src: string
-  title: string
+  title?: string
   wallet: Wallet
   verbose?: boolean
 }
@@ -26,7 +26,7 @@ const EmbededView = ({
     <iframe
       id={appId + '-iframe'}
       src={src}
-      title={title}
+      title={title || `${appId} on Senhub`}
       style={{
         height: 'calc(100vh - 64px)',
         margin: -12,
