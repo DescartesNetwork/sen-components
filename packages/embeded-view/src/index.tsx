@@ -28,11 +28,10 @@ const EmbededView = ({
       src={src}
       title={title || `${appId} on Senhub`}
       style={{
-        height: 'calc(100vh - 64px)',
+        height: '100vh',
         margin: -12,
-        marginTop: -24,
         border: 'none',
-        width: '100vw',
+        width: 'calc(100vw - 64px)',
       }}
       loading="lazy"
       allowFullScreen
