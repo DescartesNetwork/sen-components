@@ -31,7 +31,7 @@ const EmbededView = ({
         height: '100vh',
         margin: -12,
         border: 'none',
-        width: 'calc(100vw - 64px)',
+        width: 'calc(100% + 24px)',
       }}
       loading="lazy"
       allowFullScreen
