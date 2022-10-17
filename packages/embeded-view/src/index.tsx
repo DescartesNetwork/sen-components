@@ -28,6 +28,7 @@ const EmbededView = ({
       src={src}
       title={title}
       style={{
+        display: 'flex',
         height: 'calc(100vh - 64px)',
         margin: -12,
         marginTop: -24,
